@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uswfc"
+version = "1.0.1"
+description = "United States Weather Forecast Utility"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["requests"]
+keywords = ["weather", "api", "cli"]
+authors = [
+    { name = "Matthew Evans" }
+]
+
+[project.entry-points.console_scripts]
+uswfc = "uswfc.cli:main"
