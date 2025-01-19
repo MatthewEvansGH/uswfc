@@ -16,7 +16,7 @@ def fetch_forecast(latitude: float, longitude: float) -> dict[str, any]:
                 "name": data["name"],
                 "day": day,
                 "forecast": data["shortForecast"],
-                "temperature": data["temperature"],
+                "temperature": f"{data["temperature"]}{data["temperatureUnit"]}",
                 "wind": f"{data["windSpeed"]} {data["windDirection"]}",
                 "precipitation": precipitation
             }
